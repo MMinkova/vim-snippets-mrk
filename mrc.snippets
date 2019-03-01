@@ -1,0 +1,54 @@
+snippet test
+	This is a test that is working!
+snippet bk
+	=LDR  nam a22 i 4500
+	=003  ${1:UK-LoUA}
+	=008        ${2:t}${3:Date1}${4:Date2}${5:PubPlace}${6:a}${7:\\}\\\\\\ ${8:b}\\\\\\ 00${9:1} 0 ${10:eng} d
+	=020  \\\\\$a${11:13-digit ISBN}\$q${12}back
+	=020  \\\\\$a${13}\$q${14}
+	=040  \\\\\$a$1\$beng\$c$1\$d$1\$erda
+	=100  ${15:1}\\\$a${16:Surname}, ${17:FirstName},\$eauthor.
+	=245  ${18:1}${19:0}\$a${20:MainTitle} :\$b${21:subtitle} /\$c ${17} ${16} ${22}.
+	=264  \\1$\a${23:PubPlace} :\$b${24:Publisher},\$c${3}.
+	=264  \\4\$c${4}
+	=300  \\\\\$a${25} pages :\$billustrations (${26}) ;\$c${27} cm.
+	=336  \\\\\$atext\$2rdacontent
+	=336  \\\\\$astill image\$2rdacontent
+	=337  \\\\\$aunmediated\$2rdamedia
+	=338  \\\\\$avolume\$2rdacarrier
+	=600  ${28:1}0\$a${29}
+	=650  \\0\$a${30:Subject heading}.
+	=650  \\0\$a${31:Subject heading}.
+	=650  \\0\$a${32:Subject heading}.
+	=655  \\7\$a${33:LCGFT heading}\$2lcgft.
+
+snippet ldr
+	=LDR  n${1:a|g}${2:m|s} a22 i 4500
+snippet 003
+	=003  ${1:Identifier}
+snippet 005
+	=005  ${1:yyyymmddhhmmss.0}
+snippet 008bks
+	=008  ${1:yymmdd}${2:q|r|s|t}${3:Date1}${4:Date2}${5:CountryCode}${6:a| }${7:\|b|c|f|h}\\\\\\\\${8:b|6|\}\\\\\\\\00${9:0|1} ${10:0|1|p} ${11:langCode} d
+snippet 020
+	=020  \\\\\$a${1:ISBN}\$q${2:paperback|hardback|e-book}
+snippet 022
+	=022  \\\\\$a${1:ISSN}\$2${2:Source}
+snippet 028
+	=028  43\$a${1:publisherNo}\$b${2:Source}
+snippet 040
+	=040  \\\\\$a${1:OriginalCataloguingAgency}\$beng\$c$1\$d$1\$erda
+snippet 041
+	=041  ${1:0|1}\\\$a${2:langCodeText}\$h${3:langCodeOriginal}\$j${4:langCodeSubs}
+snippet 100
+	=100  1\\\$a${1:Surname},${2:FirstName},\$e${3:relatorTerm}.
+snippet 110
+	=110  2\\$a${1:CorpName},\$e${3:relatorTerm}.
+snippet 245ts
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} /×$c${5:RespStatement}.
+snippet 245tpt
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} =\$b${4:ParallelTitle} /×$c${5:RespStatement}.
+snippet 245tsnp
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle}. \$n${5:Number} ,\$p${6:PartTitle} /×$c${7:RespStatement}.
+snippet 246
+	=246  ${1:1|3}${2:
