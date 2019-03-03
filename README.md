@@ -1,8 +1,9 @@
 # vim-snippets-mrc
 The repository contains [MARC21](https://en.wikipedia.org/wiki/MARC_standards) snippets (`.mrc` file) for vim using [snipMate](https://github.com/garbas/vim-snipmate) syntax.
+[video](https://asciinema.org/)
 
 ## Contents
-The `mrc.snippets` file contains snippets for **individual MARC21 fields** and **bibliographic record templates** for common formats. Tab stops along with placeholders are used to provide cues and increase cataloguing speed.
+The `mrc.snippets` file contains snippets for **individual MARC21 fields** and **bibliographic record templates** for common formats. Tab stops, mirrors and placeholders are used to provide cues and increase cataloguing speed.
 
 #### Individual MARC21 fields 
 - The three digit field designator code is used as trigger. 
@@ -38,6 +39,8 @@ Vim does not automatically recognise `.mrc` files. See [`new-filetype`](http://v
 - Create a new ftdetect folder in your home directory `~/.vim/ftdetect` (Linux) or `~/vimfiles/ftdetect` (Windows)
 - Add a .vim file containing `au BufRead,BufNewFile *.mrc		setfiletype mrc` to detect the file type without overruling the previous default file type checks.
 - Restart vim to use it.
+
+## snipMate parser
 
 ## Encoding tips
 - Make sure to set your vim encoding to utf-8 when writing `.mrc` files by adding `set encoding=utf-8` to your `.vimrc`file (Linux) or `_vimrc` (Windows).
