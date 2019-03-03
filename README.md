@@ -33,10 +33,14 @@ Put the `mrc.snippets` file into the snippets folder of your vim runtime directo
 - Create directory `~/.vim/snippets` (Linux) or `~/vimfiles/snippets` (Windows)
 - Put the `mrc.snippets` file in that directory
 
-## File format recognition
+## File type detection
+Vim does not automatically recognise `.mrc` files. See [`new-filetype`](http://vimdoc.sourceforge.net/htmldoc/filetype.html#new-filetype).
+- Create a new ftdetect folder in your home directory `~/.vim/ftdetect` (Linux) or `~/vimfiles/ftdetect` (Windows)
+- Add a .vim file containing `au BufRead,BufNewFile *.mrc		setfiletype mrc` to detect the file type without overruling the previous default file type checks.
+- Restart vim to use it.
 
 ## Encoding tips
-- Make sure to set your vim encoding to utf-8 when writing `.mrc` files by adding `set encoding=utf-8` to your `.vimrc` file (Linux) or `_vimrc` (Windows).
+- Make sure to set your vim encoding to utf-8 when writing `.mrc` files by adding `set encoding=utf-8` to your `.vimrc`file (Linux) or `_vimrc` (Windows).
 - Use [`vim-digraphs`](http://vimdoc.sourceforge.net/htmldoc/digraph.html) if you are handling bibliographic records with special characters. Vim comes with default `digraphs` enabled. Check the output of `:digraphs` to verify.
 - If you need more than the standard 256 characters, you need to have vim compiled with multibyte support and use a multibyte encoding in order to input the enhanced digraphs set from the `digraph-table-mbyte`. Check the output of `:echo has(‘multi-byte’)` if it returns 1 you are good to go, if not check this [blog post](http://www.miglenaminkova.com/posts/not-all-punctuation-is-made-equal/).
 
