@@ -1,5 +1,5 @@
 # vim-snippets-mrc
-The repository contains [MARC21](https://en.wikipedia.org/wiki/MARC_standards) snippets (`.mrc` file) for vim using [snipMate](https://github.com/garbas/vim-snipmate) syntax.
+The repository contains [MARC21](https://en.wikipedia.org/wiki/MARC_standards) snippets (`.mrc` file) for vim using [snipMate](https://github.com/garbas/vim-snipmate) syntax.  
 [video](https://asciinema.org/)
 
 ## Contents
@@ -41,6 +41,7 @@ Vim does not automatically recognise `.mrc` files. See [`new-filetype`](http://v
 - Restart vim to use it.
 
 ## snipMate parser
+https://github.com/garbas/vim-snipmate/blob/master/doc/SnipMate.txt
 
 ## Encoding tips
 - Make sure to set your vim encoding to utf-8 when writing `.mrc` files by adding `set encoding=utf-8` to your `.vimrc`file (Linux) or `_vimrc` (Windows).
