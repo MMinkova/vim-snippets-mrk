@@ -1,5 +1,8 @@
 snippet test
 	This is a test that is working!
+
+# Bibliographic record templates : bk, ebk, exhcat, z, co, thdiss, dvd, cd
+# Book
 snippet bk
 	=LDR  nam a22 i 4500
 	=003  ${1:UK-LoUA}
@@ -22,6 +25,30 @@ snippet bk
 	=650  \\0\$a${32:Subject heading}.
 	=655  \\7\$a${33:LCGFT heading}\$2lcgft.
 
+# E-book - in progress
+snippet ebk
+	=LDR  nam a22 i 4500
+	=003  ${1:UK-LoUA}
+	=008        ${2:t}${3:Date1}${4:Date2}${5:PubPlace}${6:a}${7:\\}\\\\\\ ${8:b}\\\\\\ 00${9:1} 0 ${10:eng} d
+	=020  \\\\\$a${11:13-digit ISBN}\$q${12}back
+	=020  \\\\\$a${13}\$q${14}
+	=040  \\\\\$a$1\$beng\$c$1\$d$1\$erda
+	=100  ${15:1}\\\$a${16:Surname}, ${17:FirstName},\$eauthor.
+	=245  ${18:1}${19:0}\$a${20:MainTitle} :\$b${21:subtitle} /\$c ${17} ${16} ${22}.
+	=264  \\1$\a${23:PubPlace} :\$b${24:Publisher},\$c${3}.
+	=264  \\4\$c${4}
+	=300  \\\\\$a${25} pages :\$billustrations (${26}) ;\$c${27} cm.
+	=336  \\\\\$atext\$2rdacontent
+	=336  \\\\\$astill image\$2rdacontent
+	=337  \\\\\$aunmediated\$2rdamedia
+	=338  \\\\\$avolume\$2rdacarrier
+	=600  ${28:1}0\$a${29}
+	=650  \\0\$a${30:Subject heading}.
+	=650  \\0\$a${31:Subject heading}.
+	=650  \\0\$a${32:Subject heading}.
+	=655  \\7\$a${33:LCGFT heading}\$2lcgft.
+
+# Individual MARC21 fields
 snippet ldr
 	=LDR  n${1:a|g}${2:m|s} a22 i 4500
 snippet 003
@@ -44,11 +71,90 @@ snippet 100
 	=100  1\\\$a${1:Surname},${2:FirstName},\$e${3:relatorTerm}.
 snippet 110
 	=110  2\\$a${1:CorpName},\$e${3:relatorTerm}.
-snippet 245ts
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} /×$c${5:RespStatement}.
-snippet 245tpt
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} =\$b${4:ParallelTitle} /×$c${5:RespStatement}.
-snippet 245tsnp
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle}. \$n${5:Number} ,\$p${6:PartTitle} /×$c${7:RespStatement}.
+snippet 245
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} /\$c${4:RespStatement}.
+snippet 245:b
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} /\$c${5:RespStatement}.
+snippet 245=b
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} =\$b${4:ParallelTitle} /\$c${5:RespStatement}.
+snippet 245:bnp
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} .\$n${5:Number} ,\$p${6:PartTitle} /\$c${7:RespStatement}.
+snippet 245np
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} .\$n${5:Number} ,\$p${6:PartTitle} /\$c${7:RespStatement}.
+snippet 245h
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] /\$c${5:RespStatement}.
+snippet 245h:b
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] :\$b${5:subtitle} /\$c${6:RespStatement}.
+snippet 245h=b
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] =\$b${5:ParallelTitle} /\$c${6:RespStatement}.
+snippet 245hnp:b
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} \$h[${4:medium}] \$n${5:Number} ,\$p${6:PartTitle} :\$b${7:subtitle} /\$c${8:RespStatement}.
+snippet 245hnp
+	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} \$h[${4:medium}] \$n${5:Number} ,\$p${6:PartTitll} /\$c${7:RespStatement}.
 snippet 246
-	=246  ${1:1|3}${2:
+	=246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$a${3:Variant title}
+snippet 246i
+	=246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$iOriginal title ${3:in...}\$a${4:Variant title}
+snippet 250
+	250    \$a${1:EditionStatement}.
+snippet 264 1
+	264   1\$a${1:PubicationPlace} :\$b${2:PublisherName} ,\$c${3:PublishingDate}.
+snippet 264 4
+	264   4\$c©${1:CopyrightDate}
+snippet 300
+	300    \$a${1:Extent} pages${2:plates?} :\$billustrations (${3:qualifier} ;\$c${4:Dimensions} cm.
+snippet 300ac
+	300    \$a${1:Extent} pages${2:plates?} ;\$c${3:Dimensions} cm.
+snippet 336txt
+	336    \$atext\$\2rdacontent
+snippet 336sti
+	336    \$astill image\$\2rdacontent
+snippet 336cri
+	336    \$acartographic image|$|2rdacontent
+snippet 336ntm
+	336    \$anotated music\$\2rdacontent
+snippet 366xxx
+	336    \$aother\$\2rdacontent
+snippet 337s
+	337    \$asound recording\$\2rdamedia
+snippet 337c
+	337    \$aelectronic resource\$\2rdamedia
+snippet 337n
+	337    \$aunmediated\$\2rdamedia
+snippet 337v
+	337    \$avideo\$\2rdamedia
+snippet 337x
+	337    \$aother\$\2rdamedia
+snippet 338sd
+	338    \$aaudio disc\$\2rdacarrier
+snippet 338cd
+	338    \$acomputer disc\$\2rdacarrier
+snippet 338cr
+	338    \$aonline resource\$\2rdacarrier
+snippet 338nb
+	338    \$asheet\$\2rdacarrier
+snippet 338nc
+	338    \$avolume\$\2rdacarrier
+snippet 338vd
+	338    \$avideodisc\$\2rdacarrier
+snippet 490
+	490  1 \$a${1:SeriesStatement}
+snippet 490v
+	490  1 \a${1:SeriesStatement};\$v${2:Number}
+snippet 500
+	500    \$a${1:GeneralNote}.
+snippet 504
+	504    \$aIncludes bibliographical references and index.
+snippet 504index
+	504    \$aIncludes index.
+snippet 504bib
+	504    \$aIncludes bibliographical references.
+snippet 505
+	505  2 \$a${1:ContentsNote}.
+snippet 508
+	508    \$a${1:Credits}.
+snippet 511
+	511  1 \$a${1:Cast}.
+snippet 520
+	520    \$a${1:Summary}--${2:Source}.
+
