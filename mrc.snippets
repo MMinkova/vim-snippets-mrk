@@ -1,100 +1,116 @@
 snippet test
 	This is a test that is working!
-
-# Bibliographic record templates : bk, ebk, exhcat, z, co, thdiss, dvd, cd
+# Bibliographic record templates - bk, ebk, serial, exhcat, z, co, thdiss, dvd, cd - include a selection of the most common fields encountered by format. If you need multiple of the same field you can use the individual MARC21 fields.
 # Book
 snippet bk
-	=LDR  nam a22 i 4500
-	=003  ${1:UK-LoUA}
-	=008        ${2:t}${3:Date1}${4:Date2}${5:PubPlace}${6:a}${7:\\}\\\\\\ ${8:b}\\\\\\ 00${9:1} 0 ${10:eng} d
-	=020  \\\\\$a${11:13-digit ISBN}\$q${12}back
-	=020  \\\\\$a${13}\$q${14}
-	=040  \\\\\$a$1\$beng\$c$1\$d$1\$erda
-	=100  ${15:1}\\\$a${16:Surname}, ${17:FirstName},\$eauthor.
-	=245  ${18:1}${19:0}\$a${20:MainTitle} :\$b${21:subtitle} /\$c ${17} ${16} ${22}.
-	=264  \\1$\a${23:PubPlace} :\$b${24:Publisher},\$c${3}.
-	=264  \\4\$c${4}
-	=300  \\\\\$a${25} pages :\$billustrations (${26}) ;\$c${27} cm.
-	=336  \\\\\$atext\$2rdacontent
-	=336  \\\\\$astill image\$2rdacontent
-	=337  \\\\\$aunmediated\$2rdamedia
-	=338  \\\\\$avolume\$2rdacarrier
-	=600  ${28:1}0\$a${29}
-	=650  \\0\$a${30:Subject heading}.
-	=650  \\0\$a${31:Subject heading}.
-	=650  \\0\$a${32:Subject heading}.
-	=655  \\7\$a${33:LCGFT heading}\$2lcgft.
+	LDR  nam a22 i 4500
+	003  ${1:Identifier}
+	008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}${7:a||}${8:||b|c|f|h}||| ${9:b|6|\}||| 00${10:0|1} ${11:0|1|p} ${12:langCode} d
+	020    \$a${13:13-digit ISBN}\$q${14:paper|hard}back
+	040    \$a${1}\$beng\$c${1}\$d${1}\$erda
+	100  1 \$a${15:Surname}, ${16:FirstName},\$eauthor.
+	245  1${17:0|2|3|4}\$a${18:MainTitle} :\$b${19:subtitle} /\$c ${16} ${15} ${20:SecondAuthor|Editor}.
+	250    \$a${21:EditionStatement}.
+	264   1$\a${22:PubPlace} :\$b${23:Publisher},\$c${4}.
+	264   4\$c©${5}
+	300    \$a${24:Extent} pages :\$billustrations (${25:b&w|colour}) ;\$c${26} cm.
+	336    \$atext\$\2rdacontent
+	336    \$astill image\$\2rdacontent
+	337    \$aunmediated\$\2rdamedia
+	338    \$avolume\$\2rdacarrier
+	500    \$a${27:GeneralNote}.
+	504    \$aIncludes bibliographical references and index.
+	650   0\$a${28:Subject heading}.
+	655   7\$a${29:Genre/FormTerm}\$\2lcgft.
+	700  1 \$a${30:PersName},\$e${31:RelatorTerm}.
 
 # E-book - in progress
 snippet ebk
-	=LDR  nam a22 i 4500
-	=003  ${1:UK-LoUA}
-	=008        ${2:t}${3:Date1}${4:Date2}${5:PubPlace}${6:a}${7:\\}\\\\\\ ${8:b}\\\\\\ 00${9:1} 0 ${10:eng} d
-	=020  \\\\\$a${11:13-digit ISBN}\$q${12}back
-	=020  \\\\\$a${13}\$q${14}
-	=040  \\\\\$a$1\$beng\$c$1\$d$1\$erda
-	=100  ${15:1}\\\$a${16:Surname}, ${17:FirstName},\$eauthor.
-	=245  ${18:1}${19:0}\$a${20:MainTitle} :\$b${21:subtitle} /\$c ${17} ${16} ${22}.
-	=264  \\1$\a${23:PubPlace} :\$b${24:Publisher},\$c${3}.
-	=264  \\4\$c${4}
-	=300  \\\\\$a${25} pages :\$billustrations (${26}) ;\$c${27} cm.
-	=336  \\\\\$atext\$2rdacontent
-	=336  \\\\\$astill image\$2rdacontent
-	=337  \\\\\$aunmediated\$2rdamedia
-	=338  \\\\\$avolume\$2rdacarrier
-	=600  ${28:1}0\$a${29}
-	=650  \\0\$a${30:Subject heading}.
-	=650  \\0\$a${31:Subject heading}.
-	=650  \\0\$a${32:Subject heading}.
-	=655  \\7\$a${33:LCGFT heading}\$2lcgft.
-
+	LDR  nam a22 i 4500
+	003  ${1:Identifier}
+	007  cr cn|||||||||
+	008  ${2:yymmdd}${3:r|s|t}${4:Date1}${5:Date2}${6:CountryCode}${7:a||}${8:||b|c|f|h}|| o${9:b|6||}||| 00${10:0|1} ${11:0|1|p} ${12:langCode} d
+	020    \$a${13:13-digit ISBN}\$q${14:paper|hard}back
+	040    \$a${1}\$beng\$c${1}\$d${1}\$erda
+	100  1 \$a${15:Surname}, ${16:FirstName},\$eauthor.
+	245  1${17:0|2|3|4}\$a${18:Title}\$h[electronic resource] :\$b${19:subtitle} /\$c${16} ${15} ${20:SecondAuthor|Editor}.
+	250    \$a${21:EditionStatement}.
+	264   1$\a${22:PubPlace} :\$b${23:Publisher},\$c${4}.
+	264   4\$c©${5}
+	300    \$a1online resource (${24:Extent} pages):\$billustrations (${25:qualifier}).
+	336    \$atext\$\2rdacontent
+	336    \$astill image\$\2rdacontent
+	337    \$acomputer\$\2rdamedia
+	338    \$aonline resource\$\2rdacarrier
+	500    \$a${26:GeneralNote}.
+	504    \$aIncludes bibliographical references and index.
+	650   0\$a${27:Subject heading}.
+	655   4\$aElectronic books.
+	700  1 \$a${28:PersName},\$e${29:RelatorTerm}.
+	710  2 \$a${30:CorpName},\$esupplier.
+	776  18\$iPrint version:\$z${31:ISBN}\$t${18} : ${19}.
+	856  40\$u${32:URL}\$yRead this e-book from ${30}.
 # Individual MARC21 fields
 snippet ldr
-	=LDR  n${1:a|g}${2:m|s} a22 i 4500
+	LDR  n${1:a|g}${2:m|s} a22 i 4500
 snippet 003
-	=003  ${1:Identifier}
+	003  ${1:Identifier}
 snippet 005
-	=005  ${1:yyyymmddhhmmss.0}
-snippet 008bks
-	=008  ${1:yymmdd}${2:q|r|s|t}${3:Date1}${4:Date2}${5:CountryCode}${6:a| }${7:\|b|c|f|h}\\\\\\\\${8:b|6|\}\\\\\\\\00${9:0|1} ${10:0|1|p} ${11:langCode} d
+	005  ${1:yyyymmddhhmmss.0}
+snippet 007ebk
+	007  cr cn|||||||||
+snippet 007dvd
+	007  vd cvai||
+snippet 007cd
+	007  sd uuugnnmunuu
+snippet 008
+	008  ${1:yymmdd}${2:q|r|s|t}${3:Date1}${4:Date2}${5:CountryCode}${6:a||}${7:||b|c|f|h}||| ${8:b|6|\}||| 00${9:0|1} ${10:0|1|p} ${11:langCode} d
+snippet 008ebks
+	008  ${1:yymmdd}${2:r|s|t}${3:Date1}${4:Date2}${5:CountryCode}${6:a||}${7:||b|c|f|h}|| o${8:b|6||}||| 00${9:0|1} ${10:0|1|p} ${11:langCode} d
+snippet 008vm
+	008  ${1:yymmdd}${2:p|s}${3:Date1}${4:Date2}${5:CountryCode}${6:runningTime}|| |||| 00| v${7:a|c|l}${8:langCode} d
+snippet 008mu
+	008  ${1:yymmdd}s${2:Date}    ${3:CountryCode}  m ||  m        ${4:langCode} d
+snippet 008cf
+	008  ${1:yymmdd}s${2:Date}    ${3:CountryCode}    ||  m        ${4:langCode} d
 snippet 020
-	=020  \\\\\$a${1:ISBN}\$q${2:paperback|hardback|e-book}
+	020    \$a${1:ISBN}\$q${2:paperback|hardback|e-book}
 snippet 022
-	=022  \\\\\$a${1:ISSN}\$2${2:Source}
+	022    \$a${1:ISSN}\$2${2:Source}
 snippet 028
-	=028  43\$a${1:publisherNo}\$b${2:Source}
+	028  43\$a${1:publisher#}\$b${2:Source}
 snippet 040
-	=040  \\\\\$a${1:OriginalCataloguingAgency}\$beng\$c$1\$d$1\$erda
+	040    \$a${1:OriginalCataloguingAgency}\$beng\$c$1\$d$1\$erda
 snippet 041
-	=041  ${1:0|1}\\\$a${2:langCodeText}\$h${3:langCodeOriginal}\$j${4:langCodeSubs}
+	041  ${1:0|1} \$a${2:langCodeText}\$h${3:langCodeOriginal}\$j${4:langCodeSubs}
 snippet 100
-	=100  1\\\$a${1:Surname},${2:FirstName},\$e${3:relatorTerm}.
+	100  1 \$a${1:Surname},${2:FirstName},\$e${3:relatorTerm}.
 snippet 110
-	=110  2\\$a${1:CorpName},\$e${3:relatorTerm}.
+	110  2 \$a${1:CorpName},\$e${3:relatorTerm}.
 snippet 245
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} /\$c${4:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} /\$c${4:RespStatement}.
 snippet 245:b
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} /\$c${5:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} /\$c${5:RespStatement}.
 snippet 245=b
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} =\$b${4:ParallelTitle} /\$c${5:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} =\$b${4:ParallelTitle} /\$c${5:RespStatement}.
 snippet 245:bnp
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} .\$n${5:Number} ,\$p${6:PartTitle} /\$c${7:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} :\$b${4:subtitle} .\$n${5:Number} ,\$p${6:PartTitle} /\$c${7:RespStatement}.
 snippet 245np
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} .\$n${5:Number} ,\$p${6:PartTitle} /\$c${7:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} .\$n${5:Number} ,\$p${6:PartTitle} /\$c${7:RespStatement}.
 snippet 245h
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] /\$c${5:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] /\$c${5:RespStatement}.
 snippet 245h:b
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] :\$b${5:subtitle} /\$c${6:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] :\$b${5:subtitle} /\$c${6:RespStatement}.
 snippet 245h=b
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] =\$b${5:ParallelTitle} /\$c${6:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title}\$h[${4:medium}] =\$b${5:ParallelTitle} /\$c${6:RespStatement}.
 snippet 245hnp:b
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} \$h[${4:medium}] \$n${5:Number} ,\$p${6:PartTitle} :\$b${7:subtitle} /\$c${8:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} \$h[${4:medium}] \$n${5:Number} ,\$p${6:PartTitle} :\$b${7:subtitle} /\$c${8:RespStatement}.
 snippet 245hnp
-	=245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} \$h[${4:medium}] \$n${5:Number} ,\$p${6:PartTitll} /\$c${7:RespStatement}.
+	245  ${1:1|0}${2:0|2|3|4}\$a${3:Title} \$h[${4:medium}] \$n${5:Number} ,\$p${6:PartTitll} /\$c${7:RespStatement}.
 snippet 246
-	=246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$a${3:Variant title}
+	246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$a${3:Variant title}
 snippet 246i
-	=246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$iOriginal title ${3:in...}\$a${4:Variant title}
+	246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$iOriginal title ${3:in...}\$a${4:Variant title}
 snippet 250
 	250    \$a${1:EditionStatement}.
 snippet 264 1
@@ -102,9 +118,17 @@ snippet 264 1
 snippet 264 4
 	264   4\$c©${1:CopyrightDate}
 snippet 300
-	300    \$a${1:Extent} pages${2:plates?} :\$billustrations (${3:qualifier} ;\$c${4:Dimensions} cm.
+	300    \$a${1:Extent} pages${2:plates?} :\$billustrations (${3:qualifier}) ;\$c${4:dimensions} cm.
+snippet 300+e
+	300    \$a${1:Extent} pages${2:plates?} :\$billustrations (${3:qualifier}) ;\$c${4:dimensions} cm+\$e${5:addedMaterial}.
 snippet 300ac
-	300    \$a${1:Extent} pages${2:plates?} ;\$c${3:Dimensions} cm.
+	300    \$a${1:Extent} pages${2:plates?} ;\$c${3:dimensions} cm.
+snippet 300ebk
+	300    \$a1online resource (${1:Extent} pages):\$billustrations (${2:qualifier}).
+snippet 300dvd
+	300    \$a${1:#} videodisc${2:s?}(DVD)(${2:runningTime} min.) :\$b${3:sound}, ${4:colour} ;\$c4 3/4 in.
+snippet 300cd
+	300    \$a${1:#} ${2:audio|computer} disc${2:s?}(CD) :\$bsound} ;\$c4 3/4 in.
 snippet 336txt
 	336    \$atext\$\2rdacontent
 snippet 336sti
@@ -113,16 +137,20 @@ snippet 336cri
 	336    \$acartographic image|$|2rdacontent
 snippet 336ntm
 	336    \$anotated music\$\2rdacontent
-snippet 366xxx
+snippet 336tdi
+	336    \$atwo-dimensional moving image\$\2rdacontent
+snippet 336spw
+	336    \$aspoken word\$\2rdacontent
+snippet 336xxx
 	336    \$aother\$\2rdacontent
 snippet 337s
-	337    \$asound recording\$\2rdamedia
-snippet 337c
-	337    \$aelectronic resource\$\2rdamedia
-snippet 337n
-	337    \$aunmediated\$\2rdamedia
+	337    \$aaudio\$\2rdamedia
 snippet 337v
 	337    \$avideo\$\2rdamedia
+snippet 337c
+	337    \$acomputer\$\2rdamedia
+snippet 337n
+	337    \$aunmediated\$\2rdamedia
 snippet 337x
 	337    \$aother\$\2rdamedia
 snippet 338sd
@@ -155,6 +183,45 @@ snippet 508
 	508    \$a${1:Credits}.
 snippet 511
 	511  1 \$a${1:Cast}.
+snippet 518
+	518    \$a${1:DateTimePlaceOfEvent}.
 snippet 520
 	520    \$a${1:Summary}--${2:Source}.
-
+snippet 521
+	521    \$aCertificate ${1:AgeGroup}.
+snippet 541
+	541  0 \$\3${1:CollegeLibrary} copy ${2:Barcode}:\$aDonated by ${3:DonorName} ;\$cGift ;\$dReceived ${4:Year}.
+snippet 546
+	546    \$a${1:LangNote}.
+snippet 561
+	561  0 \$\3${1:CollegeLibrary} copy ${2:Barcode}:\$aFron the collection of  ${3:OwnersName}.
+snippet 562
+	562    \$\3${1:CollegeLibrary} copy ${2:Barcode}:\$aNumbered ${3:CopyNumber} in a limited edition of ${4:EditionRun}.
+snippet 600
+	600  ${1:0|1}0\$a${2:PersName}\$v${3:Form}.
+snippet 610
+	610  20\$a${1:CorpName}\$v${2:Form}.
+snippet 650
+	650   0\$a${1:TopicalTerm}.
+snippet 650s
+	650   0\$a${2:TopicalTerm}\$${2:x|y|z|v}${3:Subdivision}.
+snippet 650ss
+	650   0\$a${2:TopicalTerm}\$${2:x|y|z|v}${3:Subdivision}\$${2:x|y|z|v}${3:Subdivision}.
+snippet 650sss
+	650   0\$a${2:TopicalTerm}\$${2:x|y|z|v}${3:Subdivision}\$${2:x|y|z|v}${3:Subdivision}\$${2:x|y|z|v}${3:Subdivision}.
+snippet 650ssss
+	650   0\$a${2:TopicalTerm}\$${2:x|y|z|v}${3:Subdivision}\$${2:x|y|z|v}${3:Subdivision}\$${2:x|y|z|v}${3:Subdivision}\$${2:x|y|z|v}${3:Subdivision}.
+snippet 651
+	651   0\$a${1:GeographicName}.
+snippet 655
+	655   4\$a${1:Genre/FormTerm}\$\2lcgft.
+snippet 700
+	700  1 \$a${1:PersName},\$e${2:RelatorTerm}.
+snippet 710
+	710  2 \$a${1:CorpName},\$e${2:RelatorTerm}.
+snippet 776
+	776  18\$i${1:Electronic|Print} version: \$z${2:ISBN}\$t${3:TitleAndSubtitle}.
+snippet 830
+	830   0\$a${1:SeriesStatement}.
+snippet 856
+	856  40\$u${1:URL}\$y${2:LinkText}.
