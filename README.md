@@ -14,6 +14,7 @@ The `mrc.snippets` file contains snippets for **individual MARC21 fields** and *
 - Trigger glossary for each format:  
   book = `bk`  
   e-book = `ebk`  
+  serial = `s`
   exhibition catalogue = `exhcat`  
   zine =`z`  
   thesis/dissertation = `thdiss`  
