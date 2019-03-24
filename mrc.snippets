@@ -8,7 +8,7 @@ snippet bk
 	=020    \$a${13:13DigitISBN}\$q${14:paper|hard}back
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${15:Surname}, ${16:FirstName},\$eauthor.
-	=245  1${17:0|2|3|4}\$a${18:MainTitle} :\$b${19:subtitle} /\$c ${16} ${15} ${20:SecondAuthor|Editor}.
+	=245  1${17:0|2|3|4}\$a${18:MainTitle} :\$b${19:subtitle}}/\$c ${16} ${15}${20:SecondAuthor|Editor}.
 	=250    \$a${21:EditionStatement}.
 	=264   1\$a${22:PublicationPlace} :\$b${23:PublisherName},\$c${4}.
 	=264   4\$c©${5}
@@ -95,29 +95,30 @@ snippet ejour
 	=856  40\$u${26:URL}\$yRead this e-journal
 
 # Exhibition Catalogue
-snippet exhcat
-	=LDR       nam a22      i 4500
-	=003  ${1:Identifier}
-	=008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}a${7:||b|c|f|h}||| c${8:b|6|\}|||00${9:0|1} 0${10:b|c|d||}${11:langCode} d
-	=020    \$a${12:13DigitISBN}\$q${13:paper|hard}back
-	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
-	=100  1 \$a${14:Surname}, ${15:FirstName},\$eartist.
-	=245  1${16:0|2|3|4}\$a${17:MainTitle} :\$b${18:subtitle} /\$c ${15} ${14} ; ${19:Author|Editor}.
-	=246  ${20:1|3}${21: |0|1|2|3|4|5|8}\$a${22:VariantTitle}
-	=264   1\$a${23:PublicationPlace} :\$b${24:PublisherName},\$c${4}.
-	=264   4\$c©${5}
-	=300    \$a${25:Extent} pages :\$billustrations (${26:qualifier}) ;\$c${27:dimensions} cm.
-	=336    \$atext\$\2rdacontent
-	=336    \$astill image\$\2rdacontent
-	=337    \$aunmediated\$\2rdamedia
-	=338    \$avolume\$\2rdacarrier
-	=500    \$aPublished on the occasion of the exhibition held at ${28:HostInstitution}, from ${29:FromDate} to ${30:ToDate}.
-	=504    \$aIncludes ${31:bibReferences/index}.
-	=600  ${32:0|1}0\$a${14}, ${15}\$vExhibitions.
-	=650   0\$a${32:Subject heading}\$vExhibitions.
-	=655   7\$a$Exhibition catalogs\$\2lcgft.
-	=700  1 \$a${33:PersName},\$e${34:RelatorTerm}.
-	=710  2 \$a${35:CorpName},\$ehost institution.
+# BROKEN
+#snippet exhcat
+#	=LDR       nam a22      i 4500
+#	=003  ${1:Identifier}
+#	=008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}a${7:||b|c|f|h}||| c${8:b|6|\}|||00${9:0|1} 0${10:b|c|d||}${11:langCode} d
+#	=020    \$a${12:13DigitISBN}\$q${13:paper|hard}back
+#	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
+#	=100  1 \$a${14:Surname}, ${15:FirstName},\$eartist.
+#	=245  1${16:0|2|3|4}\$a${17:MainTitle} :\$b${18:subtitle} /\$c ${15} ${14} ; ${19:Author|Editor}.
+#	=246  ${20:1|3}${21: |0|1|2|3|4|5|8}\$a${22:VariantTitle}
+#	=264   1\$a${23:PublicationPlace} :\$b${24:PublisherName},\$c${4}.
+#	=264   4\$c©${5}
+#	=300    \$a${25:Extent} pages :\$billustrations (${26:qualifier}) ;\$c${27:dimensions} cm.
+#	=336    \$atext\$\2rdacontent
+#	=336    \$astill image\$\2rdacontent
+#	=337    \$aunmediated\$\2rdamedia
+#	=338    \$avolume\$\2rdacarrier
+#	=500    \$aPublished on the occasion of the exhibition held at ${28:HostInstitution}, from ${29:FromDate} to ${30:ToDate}.
+#	=504    \$aIncludes ${31:bibReferences/index}.
+#	=600  ${32:0|1}0\$a${14}, ${15}\$vExhibitions.
+#	=650   0\$a${32:Subject heading}\$vExhibitions.
+#	=655   7\$a$Exhibition catalogs\$\2lcgft.
+#	=700  1 \$a${33:PersName},\$e${34:RelatorTerm}.
+#	=710  2 \$a${35:CorpName},\$ehost institution.
 
 # Zine
 snippet z
@@ -243,7 +244,7 @@ snippet cd
 	=655   7\$a${26:Genre/Form}\$\2lcgft.
 	=700  1 \$a${27:Surname}, ${28:FirstName},\$e${30:relatorTerm}.
 
-# Individual MARC21 fields can be used to combile bibliographic records field by field or to suplement the bibliographic record templates. Field variants, using the three digit field code and a combination of indicators and ordered subfields, are included to cater for some complex fields as well as the use of the same field for different formats.
+# Individual MARC21 fields can be used to combile bibliographic records field by field or to suplement the bibliographic record templates. Field variants, using the three digit field tag and a combination of indicators and ordered subfields, are included to cater for some complex fields as well as the use of the same field for different formats.
 
 snippet ldr
 	=LDR       n${1:a|g|i|j}${2:m|s} a22      i 4500
@@ -307,10 +308,11 @@ snippet 246i
 	=246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$iOriginal title ${3:in...}\$a${4:VariantTitle}
 snippet 250
 	=250    \$a${1:EditionStatement}.
-snippet 264 1
-	=264   1\$a${1:PubicationPlace} :\$b${2:PublisherName} ,\$c${3:PublishingDate}.
-snippet 264 4
-	=264   4\$c©${1:CopyrightDate}
+# BROKEN
+#snippet 264 1
+#	=264   1\$a${1:PubicationPlace} :\$b${2:PublisherName} ,\$c${3:PublishingDate}.
+#snippet 264 4
+#	=264   4\$c©${1:CopyrightDate}
 snippet 300
 	=300    \$a${1:Extent} pages${2:plates?} :\$billustrations (${3:qualifier}) ;\$c${4:dimensions} cm.
 snippet 300+e
@@ -433,3 +435,5 @@ snippet 830
 	=830   0\$a${1:SeriesStatement}.
 snippet 856
 	=856  40\$u${1:URL}\$y${2:LinkText}.
+
+
