@@ -4,11 +4,11 @@
 snippet bk
 	=LDR       nam a22      i 4500
 	=003  ${1:Identifier}
-	=008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}${7:a||}${8:||b|c|f|h}||| ${9:b|6|\}||| 00${10:0|1} ${11:0|1|p} ${12:langCode} d
+	=008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}${7:a||}${8:||b|c|f|h}||| ${9:b|6||}||| 00${10:0|1} ${11:0|1|p} ${12:langCode} d
 	=020    \$a${13:13DigitISBN}\$q${14:paper|hard}back
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${15:Surname}, ${16:FirstName},\$eauthor.
-	=245  1${17:0|2|3|4}\$a${18:MainTitle} :\$b${19:subtitle}}/\$c ${16} ${15}${20:SecondAuthor|Editor}.
+	=245  1${17:0|2|3|4}\$a${18:MainTitle} :\$b${19:subtitle} /\$c${16} ${15} ${20:SecondAuthor|Editor}.
 	=250    \$a${21:EditionStatement}.
 	=264   1\$a${22:PublicationPlace} :\$b${23:PublisherName},\$c${4}.
 	=264   4\$c©${5}
@@ -17,9 +17,9 @@ snippet bk
 	=336    \$astill image\$\2rdacontent
 	=337    \$aunmediated\$\2rdamedia
 	=338    \$avolume\$\2rdacarrier
-	=504    \$aIncludes ${27:bibReferences/index}.
+	=504    \$aIncludes ${27:bibReferences|index}.
 	=650   0\$a${28:Subject heading}.
-	=655   7\$a${29:Genre/FormTerm}\$\2lcgft.
+	=655   7\$a${29:Genre|FormTerm}\$\2lcgft.
 	=700  1 \$a${30:PersName},\$e${31:RelatorTerm}.
 
 # E-book
@@ -28,25 +28,25 @@ snippet ebk
 	=003  ${1:Identifier}
 	=007  cr cn|||||||||
 	=008  ${2:yymmdd}${3:r|s|t}${4:Date1}${5:Date2}${6:CountryCode}${7:a||}${8:||b|c|f|h}|| o${9:b|6||}||| 00${10:0|1} ${11:0|1|p} ${12:langCode} d
-	=020    \$a${13:13DigitE-ISBN}\$q${14:paper|hard}back
+	=020    \$a${13:13DigitE-ISBN}\$qe-book
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
-	=100  1 \$a${15:Surname}, ${16:FirstName},\$eauthor.
-	=245  1${17:0|2|3|4}\$a${18:MainTitle}\$h[electronic resource] :\$b${19:subtitle} /\$c${16} ${15} ${20:SecondAuthor|Editor}.
-	=250    \$a${21:EditionStatement}.
-	=264   1\$a${22:PublicationPlace} :\$b${23:PublisherName},\$c${4}.
+	=100  1 \$a${14:Surname}, ${15:FirstName},\$eauthor.
+	=245  1${16:0|2|3|4}\$a${17:MainTitle} \$h[electronic resource] :\$b${18:subtitle} /\$c${15} ${14} ${19:SecondAuthor|Editor}.
+	=250    \$a${20:EditionStatement}.
+	=264   1\$a${21:PublicationPlace} :\$b${22:PublisherName},\$c${4}.
 	=264   4\$c©${5}
-	=300    \$a1online resource (${24:Extent} pages):\$billustrations (${25:qualifier}).
+	=300    \$a1online resource (${23:Extent} pages):\$billustrations (${24:qualifier}).
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$acomputer\$\2rdamedia
 	=338    \$aonline resource\$\2rdacarrier
 	=504    \$aIncludes bibliographical references and index.
-	=650   0\$a${26:Subject heading}.
+	=650   0\$a${25:Subject heading}.
 	=655   4\$aElectronic books.
-	=700  1 \$a${27:PersName},\$e${28:RelatorTerm}.
-	=710  2 \$a${29:CorpName},\$esupplier.
-	=776  18\$iPrint version:\$z${30:ISBN}\$t${18} : ${19}
-	=856  40\$u${31:URL}\$yRead this e-book from ${29}
+	=700  1 \$a${26:PersName},\$e${27:RelatorTerm}.
+	=710  2 \$a${28:CorpName},\$esupplier.
+	=776  18\$iPrint version:\$z${29:ISBN}\$t${17} : ${18}
+	=856  40\$u${30:URL}\$yRead this e-book from ${28}
 
 # Journals
 snippet jour
@@ -95,30 +95,29 @@ snippet ejour
 	=856  40\$u${26:URL}\$yRead this e-journal
 
 # Exhibition Catalogue
-# BROKEN
-#snippet exhcat
-#	=LDR       nam a22      i 4500
-#	=003  ${1:Identifier}
-#	=008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}a${7:||b|c|f|h}||| c${8:b|6|\}|||00${9:0|1} 0${10:b|c|d||}${11:langCode} d
-#	=020    \$a${12:13DigitISBN}\$q${13:paper|hard}back
-#	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
-#	=100  1 \$a${14:Surname}, ${15:FirstName},\$eartist.
-#	=245  1${16:0|2|3|4}\$a${17:MainTitle} :\$b${18:subtitle} /\$c ${15} ${14} ; ${19:Author|Editor}.
-#	=246  ${20:1|3}${21: |0|1|2|3|4|5|8}\$a${22:VariantTitle}
-#	=264   1\$a${23:PublicationPlace} :\$b${24:PublisherName},\$c${4}.
-#	=264   4\$c©${5}
-#	=300    \$a${25:Extent} pages :\$billustrations (${26:qualifier}) ;\$c${27:dimensions} cm.
-#	=336    \$atext\$\2rdacontent
-#	=336    \$astill image\$\2rdacontent
-#	=337    \$aunmediated\$\2rdamedia
-#	=338    \$avolume\$\2rdacarrier
-#	=500    \$aPublished on the occasion of the exhibition held at ${28:HostInstitution}, from ${29:FromDate} to ${30:ToDate}.
-#	=504    \$aIncludes ${31:bibReferences/index}.
-#	=600  ${32:0|1}0\$a${14}, ${15}\$vExhibitions.
-#	=650   0\$a${32:Subject heading}\$vExhibitions.
-#	=655   7\$a$Exhibition catalogs\$\2lcgft.
-#	=700  1 \$a${33:PersName},\$e${34:RelatorTerm}.
-#	=710  2 \$a${35:CorpName},\$ehost institution.
+snippet exhcat
+	=LDR       nam a22      i 4500
+	=003  ${1:Identifier}
+	=008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}a${7:||b|c|f|h}||| c${8:b|6||}|||00${9:0|1} 0${10:b|c|d||}${11:langCode} d
+	=020    \$a${12:13DigitISBN}\$q${13:paper|hard}back
+	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
+	=100  1 \$a${14:Surname}, ${15:FirstName},\$eartist.
+	=245  1${16:0|2|3|4}\$a${17:MainTitle} :\$b${18:subtitle} /\$c ${15} ${14} ; ${19:Author|Editor}.
+	=246  ${20:1|3}${21: |0|1|2|3|4|5|8}\$a${22:VariantTitle}
+	=264   1\$a${23:PublicationPlace} :\$b${24:PublisherName},\$c${4}.
+	=264   4\$c©${5}
+	=300    \$a${25:Extent} pages :\$billustrations (${26:qualifier}) ;\$c${27:dimensions} cm.
+	=336    \$atext\$\2rdacontent
+	=336    \$astill image\$\2rdacontent
+	=337    \$aunmediated\$\2rdamedia
+	=338    \$avolume\$\2rdacarrier
+	=500    \$aPublished on the occasion of the exhibition held at ${28:HostInstitution}, from ${29:FromDate} to ${30:ToDate}.
+	=504    \$aIncludes ${31:bibReferences/index}.
+	=600  ${32:0|1}0\$a${14}, ${15}\$vExhibitions.
+	=650   0\$a${32:Subject heading}\$vExhibitions.
+	=655   7\$a$Exhibition catalogs\$\2lcgft.
+	=700  1 \$a${33:PersName},\$e${34:RelatorTerm}.
+	=710  2 \$a${35:CorpName},\$ehost institution.
 
 # Zine
 snippet z
@@ -259,7 +258,7 @@ snippet 007dvd
 snippet 007cd
 	=007  sd uuugnnmunuu
 snippet 008
-	=008  ${1:yymmdd}${2:q|r|s|t}${3:Date1}${4:Date2}${5:CountryCode}${6:a||}${7:||b|c|f|h}||| ${8:b|6|\}||| 00${9:0|1} ${10:0|1|p} ${11:langCode} d
+	=008  ${1:yymmdd}${2:q|r|s|t}${3:Date1}${4:Date2}${5:CountryCode}${6:a||}${7:||b|c|f|h}||| ${8:b|6||}||| 00${9:0|1} ${10:0|1|p} ${11:langCode} d
 snippet 008ebks
 	=008  ${1:yymmdd}${2:r|s|t}${3:Date1}${4:Date2}${5:CountryCode}${6:a||}${7:||b|c|f|h}|| o${8:b|6||}||| 00${9:0|1} ${10:0|1|p} ${11:langCode} d
 snippet 008vm
