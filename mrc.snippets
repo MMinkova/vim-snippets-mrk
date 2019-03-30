@@ -8,19 +8,19 @@ snippet bk
 	=020    \$a${13:13DigitISBN}\$q${14:paper|hard}back
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${15:Surname}, ${16:FirstName},\$eauthor.
-	=245  1${17:0|2|3|4}\$a${18:MainTitle} :\$b${19:subtitle} /\$c${16} ${15} ${20:SecondAuthor|Editor}.
-	=250    \$a${21:EditionStatement}.
-	=264   1\$a${22:PublicationPlace} :\$b${23:PublisherName},\$c${4}.
+	=245  1${17:0|2|3|4}\$a${18:MainTitle}${19: :\$b${20:subtitle} }/\$c${16} ${15} ${21:SecondAuthor|Editor}.
+	=250    \$a${22:EditionStatement}.
+	=264   1\$a${23:PublicationPlace} :\$b${24:PublisherName},\$c${4}.
 	=264   4\$c©${5}
-	=300    \$a${24:Extent} pages :\$billustrations (${25:qualifier}) ;\$c${26:dimensions} cm.
+	=300    \$a${25:Extent} pages${26: :\$billustrations (${27:qualifier}) };\$c${28:dimensions} cm.
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$aunmediated\$\2rdamedia
 	=338    \$avolume\$\2rdacarrier
-	=504    \$aIncludes ${27:bibReferences|index}.
-	=650   0\$a${28:Subject heading}.
-	=655   7\$a${29:Genre|FormTerm}\$\2lcgft.
-	=700  1 \$a${30:PersName},\$e${31:RelatorTerm}.
+	=504    \$aIncludes ${29:bibReferences|index}.
+	=650   0\$a${30:Subject heading}.
+	=655   7\$a${31:Genre|FormTerm}\$\2lcgft.
+	=700  1 \$a${32:PersName},\$e${33:RelatorTerm}.
 
 # E-book
 snippet ebk
@@ -31,22 +31,22 @@ snippet ebk
 	=020    \$a${13:13DigitE-ISBN}\$qe-book
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${14:Surname}, ${15:FirstName},\$eauthor.
-	=245  1${16:0|2|3|4}\$a${17:MainTitle} \$h[electronic resource] :\$b${18:subtitle} /\$c${15} ${14} ${19:SecondAuthor|Editor}.
-	=250    \$a${20:EditionStatement}.
-	=264   1\$a${21:PublicationPlace} :\$b${22:PublisherName},\$c${4}.
+	=245  1${16:0|2|3|4}\$a${17:MainTitle} \$h[electronic resource]${18: :\$b${19:subtitle} }/\$c${15} ${14} ${20:SecondAuthor|Editor}.
+	=250    \$a${21:EditionStatement}.
+	=264   1\$a${22:PublicationPlace} :\$b${23:PublisherName},\$c${4}.
 	=264   4\$c©${5}
-	=300    \$a1online resource (${23:Extent} pages):\$billustrations (${24:qualifier}).
+	=300    \$a1online resource (${24:Extent} pages)${25: :\$billustrations (${26:qualifier})}.
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$acomputer\$\2rdamedia
 	=338    \$aonline resource\$\2rdacarrier
 	=504    \$aIncludes bibliographical references and index.
-	=650   0\$a${25:Subject heading}.
+	=650   0\$a${27:Subject heading}.
 	=655   4\$aElectronic books.
-	=700  1 \$a${26:PersName},\$e${27:RelatorTerm}.
-	=710  2 \$a${28:CorpName},\$esupplier.
-	=776  18\$iPrint version:\$z${29:ISBN}\$t${17} : ${18}
-	=856  40\$u${30:URL}\$yRead this e-book from ${28}
+	=700  1 \$a${28:PersName},\$e${29:RelatorTerm}.
+	=710  2 \$a${30:CorpName},\$esupplier.
+	=776  18\$iPrint version:\$z${31:ISBN}\$t${17} : ${19}
+	=856  40\$u${32:URL}\$yRead this e-book from ${30}
 
 # Journals
 snippet jour
@@ -56,19 +56,19 @@ snippet jour
 	=008  ${2:yymmdd}c${3:Date1}${4:Date2}${5:CountryCode}${6:a|b|e|f|g|m|q|u|w}${7:|r|u|x}|p|o|||| 0   ${8:a|z}0${9:langCode} d
 	=022    \$a${10:ISSN}
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
-	=245  0${11:0|2|3|4}\$a${12:MainTitle} \$h[electronic resource]:\$b${13:subtitle}.
-	=264   1\$a${14:PublicationPlace} :\$b${15:PublisherName},\$c${3}-
-	=300    \$a1 online resource :\$billustrations (${16:b&w|colour}).
-	=310    \$a${17:PublicationQrequency}
+	=245  0${11:0|2|3|4}\$a${12:MainTitle} \$h[electronic resource]${13: :\$b${14:subtitle}}.
+	=264   1\$a${15:PublicationPlace} :\$b${16:PublisherName},\$c${3}-
+	=300    \$a1 online resource${17: :\$billustrations (${18:qualifier})}.
+	=310    \$a${19:PublicationFrequency}
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$acomputer\$\2rdamedia
 	=338    \$aonline resource\$\2rdacarrier
-	=362  0 \$a${18:PublicationDateAndNumber}-
-	=500    \$a${19:GeneralNote}.
-	=520    \$a${20:Summary}--${21:Source}.
-	=588  ${22:0| }\$a${23:SourceOfDescription}.
-	=650   0\$a${24:Subject heading}\$vPeriodicals.
+	=362  0 \$a${20:PublicationDateAndNumber}-
+	=500    \$a${21:GeneralNote}.
+	=520    \$a${22:Summary}--${23:Source}.
+	=588  ${24:0| }\$a${25:SourceOfDescription}.
+	=650   0\$a${26:Subject heading}\$vPeriodicals.
 	=655   7\$aPeriodicals\$\2lcgft.
 
 # Electronic Journal
@@ -78,21 +78,21 @@ snippet ejour
 	=008  ${2:yymmdd}${3:c|d}${4:Date1}${5:Date2}${6:CountryCode}${7:a|b|e|f|g|m|q|u|w}${8:|r|u|x}|p| |||| 0   ${9:a|z}0${10:langCode} d
 	=022    \$a${11:e-ISSN}
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
-	=245  0${12:0|2|3|4}\$a${13:MainTitle} :\$b${14:subtitle}.
-	=264   1\$a${15:PublicationPlace} :\$b${16:PublisherName},\$c${4}-
-	=300    \$avolumes :\$billustrations (${17:b&w|colour}) ;\$c${18:dimensions} cm.
-	=310    \$a${19:PublicationQrequency}
+	=245  0${12:0|2|3|4}\$a${13:MainTitle} \$h[electronic resource]${14: :\$b${15:subtitle}}.
+	=264   1\$a${16:PublicationPlace} :\$b${17:PublisherName},\$c${4}-
+	=300    \$avolumes${18: :\$billustrations (${19:qualifier}) };\$c${20:dimensions} cm.
+	=310    \$a${21:PublicationQrequency}
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$aunmediated\$\2rdamedia
 	=338    \$avolume\$\2rdacarrier
-	=362  0 \$a${20:PublicationDateAndNumber}-
-	=588  ${21:0| }\$a${22:SourceOfDescription}.
-	=650   0\$a${23:Subject heading}\$vPeriodicals.
+	=362  0 \$a${22:PublicationDateAndNumber}-
+	=588  ${23:0| }\$a${24:SourceOfDescription}.
+	=650   0\$a${25:Subject heading}\$vPeriodicals.
 	=655   7\$aPeriodicals\$\2lcgft.
-	=710  2 \$a${24:CorpName},\$eissuing body.
-	=776  18\$iPrint version:\$x${25:ISSN}\$t${13} : ${14}
-	=856  40\$u${26:URL}\$yRead this e-journal
+	=710  2 \$a${26:CorpName},\$eissuing body.
+	=776  18\$iPrint version:\$x${27:ISSN}\$t${13} : ${15}
+	=856  40\$u${28:URL}\$yRead this e-journal
 
 # Exhibition Catalogue
 snippet exhcat
@@ -102,22 +102,22 @@ snippet exhcat
 	=020    \$a${12:13DigitISBN}\$q${13:paper|hard}back
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${14:Surname}, ${15:FirstName},\$eartist.
-	=245  1${16:0|2|3|4}\$a${17:MainTitle} :\$b${18:subtitle} /\$c ${15} ${14} ; ${19:Author|Editor}.
-	=246  ${20:1|3}${21: |0|1|2|3|4|5|8}\$a${22:VariantTitle}
-	=264   1\$a${23:PublicationPlace} :\$b${24:PublisherName},\$c${4}.
+	=245  1${16:0|2|3|4}\$a${17:MainTitle}${18: :\$b${19:subtitle} }/\$c ${15} ${14} ; ${20:Author|Editor}.
+	=246  ${21:1|3}${22: |0|1|2|3|4|5|8}\$a${23:VariantTitle}
+	=264   1\$a${24:PublicationPlace} :\$b${25:PublisherName},\$c${4}.
 	=264   4\$c©${5}
-	=300    \$a${25:Extent} pages :\$billustrations (${26:qualifier}) ;\$c${27:dimensions} cm.
+	=300    \$a${26:Extent} pages${27: :\$billustrations (${28:qualifier}) };\$c${29:dimensions} cm.
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$aunmediated\$\2rdamedia
 	=338    \$avolume\$\2rdacarrier
-	=500    \$aPublished on the occasion of the exhibition held at ${28:HostInstitution}, from ${29:FromDate} to ${30:ToDate}.
-	=504    \$aIncludes ${31:bibReferences/index}.
-	=600  ${32:0|1}0\$a${14}, ${15}\$vExhibitions.
-	=650   0\$a${32:Subject heading}\$vExhibitions.
+	=500    \$aPublished on the occasion of the exhibition held at ${30:HostInstitution}, from ${31:FromDate} to ${32:ToDate}.
+	=504    \$aIncludes ${33:bibReferences/index}.
+	=600  ${34:0|1}0\$a${14}, ${15}\$vExhibitions.
+	=650   0\$a${35:Subject heading}\$vExhibitions.
 	=655   7\$a$Exhibition catalogs\$\2lcgft.
-	=700  1 \$a${33:PersName},\$e${34:RelatorTerm}.
-	=710  2 \$a${35:CorpName},\$ehost institution.
+	=700  1 \$a${36:PersName},\$e${37:RelatorTerm}.
+	=710  2 \$a${30},\$ehost institution.
 
 # Zine
 snippet z
@@ -126,19 +126,19 @@ snippet z
 	=008  ${2:yymmdd}${3:q|r|s|t}${4:Date1}${5:Date2}${6:CountryCode}a${7:||b|c|f|h}||| |||| 000 ||${8:langCode} d
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${9:Surname}, ${10:FirstName},\$eartist.
-	=245  1${11:0|2|3|4}\$a${12:MainTitle} /\$c ${10} ${9}.
-	=246  ${13:1|3}${14: |0|1|2|3|4|5|8}\$a${15:VariantTitle}
-	=264   1\$a${16:PublicationPlace} :\$b${17:PublisherName},\$c${4}.
+	=245  1${11:0|2|3|4}\$a${12:MainTitle}${13: :\$b${14:subtitle} }/\$c ${10} ${9}.
+	=246  ${15:1|3}${16: |0|1|2|3|4|5|8}\$a${17:VariantTitle}
+	=264   1\$a${18:PublicationPlace} :\$b${19:PublisherName},\$c${4}.
 	=264   4\$c©${5}
-	=300    \$a${18:Extent} pages :\$billustrations (${19:qualifier}) ;\$c${20:dimensions} cm.
+	=300    \$a${20:Extent} pages${21: :\$billustrations (${22:qualifier}) } ;\$c${23:dimensions} cm.
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$aunmediated\$\2rdamedia
 	=338    \$avolume\$\2rdacarrier
-	=500    \$a${21:GeneralNote}.
-	=505  2 \$a${22:Contents}.
-	=520    \$a${23:Summary}--${24:Source}.
-	=650   0\$a${25:Subject heading}.
+	=500    \$a${24:GeneralNote}.
+	=505  2 \$a${25:Contents}.
+	=520    \$a${26:Summary}--${27:Source}.
+	=650   0\$a${28:Subject heading}.
 	=655   7\$a$Zines\$\2lcgft.
 
 # Comic Book
@@ -149,27 +149,27 @@ snippet co
 	=02${9:0|2}    \$a${10:ISSN|ISBN+$q}
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${11:Surname}, ${12:FirstName},\$eauthor.
-	=245  1${13:0|2|3|4}\$a${14:MainTitle} :\$b${15:subtitle}. \$n${16:Volume/Number} /\$c ${12} ${11}.
-	=264   1\$a${17:PublicationPlace} :\$b${18:PublisherName},\$c${4}.
+	=245  1${13:0|2|3|4}\$a${14:MainTitle}${15: :\$b${16:subtitle} }. \$n${17:Volume/Number} /\$c ${12} ${11}.
+	=264   1\$a${18:PublicationPlace} :\$b${19:PublisherName},\$c${4}.
 	=264   4\$c©${5}
-	=300    \$a${19:Extent} pages :\$billustrations (colour) ;\$c${20:dimensions} cm.
+	=300    \$a${20:Extent} pages${21: :\$billustrations (${22:qualifier}) };\$c${23:dimensions} cm.
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$aunmediated\$\2rdamedia
 	=338    \$avolume\$\2rdacarrier
-	=490  1 \$a${21:SeriesStatement} ;\$v${22:Volume/Number}
-	=500    \$a${23:GeneralNote}.
-	=504    \$aIncludes ${24:bibReferences/index}.
-	=505  2 \$a${25:Contents}.
-	=508    \$a${26:Credits}.
-	=600  1 \$a${27:PersName}\$c(Ficticious character)\$vComic books, strips, etc.
+	=490  1 \$a${24:SeriesStatement} ;\$v${25:Volume/Number}
+	=500    \$a${26:GeneralNote}.
+	=504    \$aIncludes ${27:bibReferences/index}.
+	=505  2 \$a${28:Contents}.
+	=508    \$a${29:Credits}.
+	=600  1 \$a${30:PersName}\$c(Ficticious character)\$vComic books, strips, etc.
 	=650   0\$aSuperheroes\$vComic books, strips, etc.
 	=655   7\$a$Comic books, strips, etc.\$\2lcgft.
 	=655   7\$a$Superhero comic books, strips, etc.\$\2lcgft.
 	=655   7\$a$Comics (Graphic works)\$\2lcgft.
 	=655   7\$a$Graphic novels\$\2lcgft.
-	=700  1 \$a${28:PersName},\$e${29:RelatorTerm}.
-	=710  2 \$a${30:CorpName},\$epublisher.
+	=700  1 \$a${31:PersName},\$e${32:RelatorTerm}.
+	=710  2 \$a${33:CorpName},\$epublisher.
 
 # Thesis / Dissertation
 snippet th
@@ -178,21 +178,21 @@ snippet th
 	=008  ${2:yymmdd}s${3:Date1}    ${4:CountryCode}a|||| mb|| 000 0 ${5:langCode} d
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${6:Surname}, ${7:FirstName},\$eauthor.
-	=245  1${8:0|2|3|4}\$a${9:MainTitle} :\$b${10:subtitle} /\$c ${7} ${6}.
+	=245  1${8:0|2|3|4}\$a${9:MainTitle}${10: :\$b${11:subtitle}}/\$c ${7} ${6}.
 	=264   1\$c${3}.
-	=300    \$a${11:Extent} pages :\$billustrations (${12:qualifier}) ;\$c${13:dimensions} cm.
+	=300    \$a${12:Extent} pages${13: :\$billustrations (${14:qualifier}) };\$c${15:dimensions} cm.
 	=336    \$atext\$\2rdacontent
 	=336    \$astill image\$\2rdacontent
 	=337    \$aunmediated\$\2rdamedia
 	=338    \$avolume\$\2rdacarrier
-	=502    \$aThesis (${14:B.A.|M.A|Ph.D.} ${15:CourseName})--${16:UniversityName}, ${3}.
+	=502    \$aThesis (${16:B.A.|M.A|Ph.D.} ${17:CourseName})--${18:UniversityName}, ${3}.
 	=504    \$aIncludes bibliographical references.
-	=506    \$aThis thesis is the property of ${16} and may not be removed from the library.
-	=520  3 \$a${17:Summary}--Abstract.
-	=650   0\$a${18:Subject heading}.
+	=506    \$aThis thesis is the property of ${18} and may not be removed from the library.
+	=520  3 \$a${19:Summary}--Abstract.
+	=650   0\$a${20:Subject heading}.
 	=655   7\$aAcademic theses\$\2lcgft.
-	=710  2 \$a${16},\$ehost institution.
-	=740  0 \$aThesis (${14} ${15})--${16}.
+	=710  2 \$a${18},\$ehost institution.
+	=740  0 \$aThesis (${16} ${17})--${18}.
 
 # DVD
 snippet dvd
@@ -202,23 +202,23 @@ snippet dvd
 	=008  ${2:yymmdd}${3:p|s}${4:Date1}${5:Date2}${6:CountryCode}${7:runningTime}|| |||| 00| v${8:a|c|l}${9:langCode} d
 	=028  43\$a${10:PublisherNumber}\$b${11:Source}
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
-	=245  0${12:0|2|3|4}\$a${13:MainTitle} \$h[videorecording DVD]:\$b${14:subtitle} /\$cdirected by ${15:FirstName} ${16:Surname}.
-	=264   1\$a${17:PublicationPlace} :\$b${18:PublisherName},\$c${4}.
+	=245  0${12:0|2|3|4}\$a${13:MainTitle} \$h[videorecording DVD]${14: :\$b${15:subtitle}}/\$cdirected by ${16:FirstName} ${17:Surname}.
+	=264   1\$a${18:PublicationPlace} :\$b${19:PublisherName},\$c${4}.
 	=264   4\$c©${4}
-	=300    \$a${19:#} videodisc${20:s?}(DVD)(${21:runningTime} min.) :\$b${22:sound}, ${23:colour} ;\$c4 3/4 in.
+	=300    \$a${20:#} videodisc${21:s?}(DVD)(${22:runningTime} min.) :\$b${23:sound}, ${24:colour} ;\$c4 3/4 in.
 	=336    \$atwo-dimensional moving image\$\2rdacontent
 	=337    \$avideo\$\2rdamedia
 	=338    \$avideodisc\$\2rdacarrier
 	=500    \$aOriginally released as a film in ${5}.
-	=505  2  \$a${24:Special Features | Contents} include: ${25:SpecialFeautres|Contents}.
-	=508    \$a${26:Credits}.
-	=511  1 \$a${27:Cast}.
-	=520    \$a${28:Summary}--${29:Source}.
-	=521    \$aCertificate ${30:AgeGroup}.
-	=650   0\$a${31:Subject heading}\$vDrama.
+	=505  2  \$a${25:Special Features | Contents} include: ${26:SpecialFeautres|Contents}.
+	=508    \$a${27:Credits}.
+	=511  1 \$a${28:Cast}.
+	=520    \$a${29:Summary}--${30:Source}.
+	=521    \$aCertificate ${31:AgeGroup}.
+	=650   0\$a${32:Subject heading}\$vDrama.
 	=655   7\$aFeature films\$\2lcgft.
-	=700  1 \$a${16}, ${15},\$edirector.
-	=700  1 \$a${32:PersName},\$eactor.
+	=700  1 \$a${17}, ${16},\$edirector.
+	=700  1 \$a${33:PersName},\$eactor.
 
 # CD
 snippet cd
@@ -228,20 +228,20 @@ snippet cd
 	=008  ${3:yymmdd}s${4:Date}    ${5:CountryCode}  ${6:m| } ||  m        ${7:langCode} d
 	=028  43\$a${8:PublisherNumber}\$b${9:Source}
 	=040    \$a${2}\$beng\$c${2}\$d${2}\$erda
-	=245  0${10:0|2|3|4}\$a${11:MainTitle} \$h[${12:sound recording|computer file}]:\$b${13:subtitle} /\$c${14:RespStatement}.
-	=264   1\$a${15:PublicationPlace} :\$b${16:PublisherName},\$c${4}.
+	=245  0${10:0|2|3|4}\$a${11:MainTitle} \$h[${12:sound recording|computer file}]${13: :\$b${14:subtitle}}/\$c${15:RespStatement}.
+	=264   1\$a${16:PublicationPlace} :\$b${17:PublisherName},\$c${4}.
 	=264   4\$c©${4}
-	=300    \$a${17:#} ${18:audio|computer} disc${19:s?} ;\$c4 3/4 in.
-	=336    \$a${20:sounds|text|still image}\$\2rdacontent
-	=337    \$a${18}\$\2rdamedia
-	=338    \$a${18} disc\$\2rdacarrier
-	=500    \$a${21:GeneralNote}.
-	=505  2  \$a${22:Contents}.
-	=508    \$a${23:Credits}.
-	=518    \$a${24:Recorded?}.
-	=650   0\$a${25:Subject heading}.
-	=655   7\$a${26:Genre/Form}\$\2lcgft.
-	=700  1 \$a${27:Surname}, ${28:FirstName},\$e${30:relatorTerm}.
+	=300    \$a${18:#} ${19:audio|computer} disc${20:s?};\$c4 3/4 in.
+	=336    \$a${21:sounds|text|still image}\$\2rdacontent
+	=337    \$a${19}\$\2rdamedia
+	=338    \$a${19} disc\$\2rdacarrier
+	=500    \$a${22:GeneralNote}.
+	=505  2  \$a${23:Contents}.
+	=508    \$a${24:Credits}.
+	=518    \$a${25:Recorded?}.
+	=650   0\$a${26:Subject heading}.
+	=655   7\$a${27:Genre/Form}\$\2lcgft.
+	=700  1 \$a${28:Surname}, ${29:FirstName},\$e${30:relatorTerm}.
 
 # Individual MARC21 fields can be used to combile bibliographic records field by field or to suplement the bibliographic record templates. Field variants, using the three digit field tag and a combination of indicators and ordered subfields, are included to cater for some complex fields as well as the use of the same field for different formats.
 
@@ -307,11 +307,10 @@ snippet 246i
 	=246  ${1:1|3}${2: |0|1|2|3|4|5|8}\$iOriginal title ${3:in...}\$a${4:VariantTitle}
 snippet 250
 	=250    \$a${1:EditionStatement}.
-# BROKEN
-#snippet 264 1
-#	=264   1\$a${1:PubicationPlace} :\$b${2:PublisherName} ,\$c${3:PublishingDate}.
-#snippet 264 4
-#	=264   4\$c©${1:CopyrightDate}
+snippet 264_1
+	=264   1\$a${1:PubicationPlace} :\$b${2:PublisherName} ,\$c${3:PublishingDate}.
+snippet 264_4
+	=264   4\$c©${1:CopyrightDate}
 snippet 300
 	=300    \$a${1:Extent} pages${2:plates?} :\$billustrations (${3:qualifier}) ;\$c${4:dimensions} cm.
 snippet 300+e

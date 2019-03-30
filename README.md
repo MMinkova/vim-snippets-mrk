@@ -3,7 +3,7 @@ The repository contains [MARC21](https://www.loc.gov/marc/bibliographic/) snippe
 [video](https://asciinema.org/)
 
 ## Contents
-The `mrc.snippets` file contains snippets for **bibliographic record templates** for common formats and **individual MARC21 fields**. Tab stops, mirrors and placeholders are used to provide cues and increase cataloguing speed.
+The `mrc.snippets` file contains snippets for **bibliographic record templates** for common formats and **individual MARC21 fields**. Tab stops, mirrors, placeholders and nested tab stops are used to provide cues, flexibility, and increase cataloguing speed.
 
 #### Bibliographic record templates
 - Trigger glossary for each format:  
@@ -16,9 +16,9 @@ The `mrc.snippets` file contains snippets for **bibliographic record templates**
   thesis/dissertation = `th`  
   DVD = `dvd`  
   CD = `cd`  
-- Include a selection of MARC21 fields commonly found in each format.
+- Include a selection of MARC21 fields commonly found in each format. Multiple and additional fields can be subsequently added.
+- Nested tab stops are included for 245$b and 300$b. These nested tab stops are removed and skipped entirely if their placeholders are edited. This allows for cases in which 245$b and 300$b are needed or not.
 - Used to increase efficiency when cataloguing similar resources.
-- Multiple and additional fields can be subsequently added.
 
 #### Individual MARC21 fields 
 - The three digit field tag is used as a trigger.
