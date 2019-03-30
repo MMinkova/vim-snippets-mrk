@@ -17,7 +17,7 @@ The `mrc.snippets` file contains snippets for **bibliographic record templates**
   DVD = `dvd`  
   CD = `cd`  
 - Include a selection of MARC21 fields commonly found in each format. Multiple and additional fields can be subsequently added.
-- Nested tab stops are included for 245$b and 300$b. These nested tab stops are removed and skipped entirely if their placeholders are edited. This allows for cases in which 245$b and 300$b are needed or not.
+- Nested tab stops are included for `245$b` and `300$b`. These nested tab stops are removed and skipped entirely if their placeholders are edited. This allows for cases in which `245$b` and `300$b` are needed or not.
 - Used to increase efficiency when cataloguing similar resources.
 
 #### Individual MARC21 fields 
