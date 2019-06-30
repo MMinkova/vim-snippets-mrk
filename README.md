@@ -1,6 +1,5 @@
 # vim-snippets-mrk
-[MARC21](https://www.loc.gov/marc/bibliographic/) bibliographic snippets in (`.mrk`) format.
-
+MARC21 bibliographic record snippets in `.mrk` format.
 ## Contents
 The `mrk.snippets` file contains snippets for **bibliographic record templates** for common formats and **individual MARC21 fields**. Tab stops, mirrors, placeholders and nested tab stops are used to provide cues, flexibility, and increase cataloguing speed.
 
