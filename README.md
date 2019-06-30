@@ -77,5 +77,5 @@ Originally based on the University of the Arts London Library Services' catalogu
 Feel free to send  me a pull request if you require more formats or field variations to be included.
 
 ## License
-[MIT license](MIT License https://opensource.org/licenses/MIT)
+[MIT license](https://opensource.org/licenses/MIT)
 
