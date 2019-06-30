@@ -1,3 +1,7 @@
+# Name: mrk-snippets
+# Description: MARC21 bibliographic record snippets in .mrk format.
+# Authors: Miglena Minkova & Michael Doyle
+# Date: June 30, 2019
 # Bibliographic record templates by format include a selection of the most common fields encountered in print books, e-books, journals, electronic journals, exhibition catalogues, zines, comic books, theses and dissertations, DVDs, CDs. If needed, multiple and additional fields can be subsequently added from the list of individual MARC21 fields.
 
 # Print Book
@@ -149,7 +153,7 @@ snippet co
 	=02${9:0|2}    \$a${10:ISSN|ISBN+$q}
 	=040    \$a${1}\$beng\$c${1}\$d${1}\$erda
 	=100  1 \$a${11:Surname}, ${12:FirstName},\$eauthor.
-	=245  1${13:0|2|3|4}\$a${14:MainTitle}${15: :\$b${16:subtitle} }. \$n${17:Volume/Number} /\$c ${12} ${11}.
+	=245  1${13:0|2|3|4}\$a${14:MainTitle}${15: :\$b${16:subtitle}}. \$n${17:Volume/Number} /\$c ${12} ${11}.
 	=264   1\$a${18:PublicationPlace} :\$b${19:PublisherName},\$c${4}.
 	=264   4\$c©${5}
 	=300    \$a${20:Extent} pages${21: :\$billustrations (${22:qualifier}) };\$c${23:dimensions} cm.
@@ -159,17 +163,17 @@ snippet co
 	=338    \$avolume\$\2rdacarrier
 	=490  1 \$a${24:SeriesStatement} ;\$v${25:Volume/Number}
 	=500    \$a${26:GeneralNote}.
-	=504    \$aIncludes ${27:bibReferences/index}.
-	=505  2 \$a${28:Contents}.
-	=508    \$a${29:Credits}.
-	=600  1 \$a${30:PersName}\$c(Ficticious character)\$vComic books, strips, etc.
+	=505  2 \$a${27:Contents}.
+	=508    \$a${28:Credits}.
+	=600  1 \$a${29:PersName}\$c(Ficticious character)\$vComic books, strips, etc.
 	=650   0\$aSuperheroes\$vComic books, strips, etc.
 	=655   7\$a$Comic books, strips, etc.\$\2lcgft.
 	=655   7\$a$Superhero comic books, strips, etc.\$\2lcgft.
 	=655   7\$a$Comics (Graphic works)\$\2lcgft.
 	=655   7\$a$Graphic novels\$\2lcgft.
-	=700  1 \$a${31:PersName},\$e${32:RelatorTerm}.
-	=710  2 \$a${33:CorpName},\$epublisher.
+	=700  1 \$a${30:PersName},\$e${31:RelatorTerm}.
+	=710  2 \$a${19},\$epublisher.
+	=830   0\$a${32:SeriesStatement}.
 
 # Thesis / Dissertation
 snippet th
